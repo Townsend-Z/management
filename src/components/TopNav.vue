@@ -8,20 +8,6 @@
         <el-button type="text" class="logOut"><i class="el-icon-user"></i>个人中心</el-button>
         <el-button type="text" class="logOut">退出</el-button>
       </div>
-    <!-- <el-menu class="el-menu-demo" mode="horizontal"
-  background-color="#545c64"
-  text-color="#fff"
-  active-text-color="#ffd04b" @select="handleSelect">
-    
-    <el-menu-item  index="1"><i class="el-icon-s-home"></i>你好管理员</el-menu-item>
-    <el-submenu  index="2">
-    <template class="personalInfo" slot="title"><i class="el-icon-user"></i>个人中心</template>
-    <el-menu-item index="2_1">选项1</el-menu-item>
-    <el-menu-item index="2_2">选项2</el-menu-item>
-    <el-menu-item index="2_3">选项3</el-menu-item>
-    </el-submenu>
-
-    </el-menu> -->
   </div>
 </template>
 
@@ -37,9 +23,9 @@ export default {
       }
   },
   methods:{
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      },
+      // handleSelect(key, keyPath) {
+      //   console.log(key, keyPath);
+      // },
 
   }
 }

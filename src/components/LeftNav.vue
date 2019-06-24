@@ -1,39 +1,55 @@
 <template>
   <div class="leftNav">
       <el-row class="tac">
-        <el-col>
+        <el-col :span="4">   
             <el-menu
-            default-active="4"
+            default-active="2"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
             background-color="#545c64"
             text-color="#fff"
-            active-text-color="#09f">
-            <el-menu-item index="1">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航1</span>
-            </el-menu-item>
-            <el-menu-item index="2">
-                <i class="el-icon-document"></i>
-                <span slot="title">导航2</span>
-            </el-menu-item>
-            <el-menu-item index="3">
-                <i class="el-icon-setting"></i>
-                <span slot="title">导航3</span>
-            </el-menu-item>
-            <el-menu-item index="4">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航4</span>
-            </el-menu-item>
-            <el-menu-item index="5">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航5</span>
-            </el-menu-item>
-            <el-menu-item index="6">
-                <i class="el-icon-menu"></i>
-                <span slot="title">导航6</span>
-            </el-menu-item>
+            active-text-color="#ffd04b">
+            <el-submenu index="1">
+                <template slot="title">
+                <i class="el-icon-s-platform"></i>
+                <span>服务大厅</span>
+                </template>
+                <el-menu-item-group>
+                <el-menu-item index="1-1">在场服务</el-menu-item>
+                <el-menu-item index="1-2">历史服务</el-menu-item>
+                </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="2">
+                <template slot="title">
+                <i class="el-icon-s-tools"></i>
+                <span>系统设置</span>
+                </template>
+                <el-menu-item-group>
+                <el-menu-item index="1-1">权限管理</el-menu-item>
+                <el-menu-item index="1-2">角色管理</el-menu-item>
+                </el-menu-item-group>
+            </el-submenu>
+            <el-submenu index="3">
+                <template slot="title">
+                <i class="el-icon-user-solid"></i>
+                <span>人员数据</span>
+                </template>
+                <el-menu-item-group>        
+                <el-menu-item index="1-1">人员数量</el-menu-item>
+                <el-menu-item index="1-2">人员位置</el-menu-item>
+                </el-menu-item-group>
+            </el-submenu>      
+            <el-submenu index="4">
+                <template slot="title">
+                <i class="el-icon-message-solid"></i>
+                <span>健康报警</span>
+                </template>
+                <el-menu-item-group>       
+                <el-menu-item index="1-1">心率报警</el-menu-item>
+                <el-menu-item index="1-2">血压报警</el-menu-item>
+                </el-menu-item-group>
+            </el-submenu>     
             </el-menu>
         </el-col>
     </el-row>
@@ -47,31 +63,34 @@ export default {
   },
   data() {
       return {
-          
-      }
+
+      };
   },
   methods:{
-    //   handleOpen(key, keyPath) {
-    //     console.log(key, keyPath);
-    //   },
-    //   handleClose(key, keyPath) {
-    //     console.log(key, keyPath);
-    //   }
+      handleOpen(){
+
+      },
+      handleClose(){
+
+      }
   },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.el-submenu .el-menu-item{
+    min-width: 150px;
+}
+.el-submenu__title{
+    min-width: 150px;
+}
 .leftNav{
-    height: 400px;
+    width: 150px;
+    height: 600px;
     float: left;
     margin: 0;
     padding: 0;
     background: #545c64;
-}
-.tac{
-    
-    height: 400px;
 }
 </style>
