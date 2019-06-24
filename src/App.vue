@@ -2,6 +2,7 @@
   <div id="app">
     <top-nav></top-nav>
     <left-nav></left-nav>
+    <main-content></main-content>
   </div>
 </template>
 

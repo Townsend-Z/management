@@ -80,17 +80,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .el-submenu .el-menu-item{
-    min-width: 150px;
+    min-width: 100%;
 }
 .el-submenu__title{
-    min-width: 150px;
+    min-width: 100%;
 }
 .leftNav{
-    width: 150px;
+    width: 10%;
     height: 600px;
     float: left;
-    margin: 0;
-    padding: 0;
     background: #545c64;
 }
 </style>
