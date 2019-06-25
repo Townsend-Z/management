@@ -7,19 +7,16 @@
             <el-menu
             default-active="2"
             class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
             background-color="#545c64"
-            text-color="#fff"
-            active-text-color="#ffd04b">
+            text-color="#fff">
             <el-submenu index="1">
                 <template slot="title">
                 <i class="el-icon-s-platform"></i>
                 <span>服务大厅</span>
                 </template>
                 <el-menu-item-group>
-                <el-menu-item index="1-1">在场服务</el-menu-item>
-                <el-menu-item index="1-2">历史服务</el-menu-item>
+                <el-menu-item index="1-1"><router-link to="test">在场服务</router-link></el-menu-item>
+                <el-menu-item index="1-2"><router-link to="test1">历史服务</router-link></el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-submenu index="2">
@@ -58,7 +55,7 @@
     </div>
     <!-- 页面内容 -->
     <div class="content">
-
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -93,6 +90,10 @@ export default {
   height: 600px;
   float: left;
   background: #545c64;
+}
+.mainContent .leftNav a{
+  color: aliceblue;
+  text-decoration: none;
 }
 .mainContent .content{
   width:90%;

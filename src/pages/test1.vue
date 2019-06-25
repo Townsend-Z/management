@@ -1,6 +1,6 @@
 <template>
   <div class="test1">
-
+    路由测试2
   </div>
 </template>
 

@@ -6,12 +6,29 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import MainContent from '@/components/MainContent.vue'
+import test from '@/pages/test.vue'
+import test1 from '@/pages/test1.vue'
 export default new Router({
     mode:'history',
     routes:[
         {
-            path:'*',
-            redirect:'/'
+            path:'/',
+            name:'index',
+            component:MainContent,
+            redirect:'/test',
+            children:[
+                {
+                    path:'test1',
+                    name:'test1',
+                    component:test1,
+                },
+                {
+                    path:'test',
+                    name:'test',
+                    component:test,
+                }
+            ]
         },
 
     ]
