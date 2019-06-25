@@ -5,7 +5,7 @@
       <el-row class="tac">
         <el-col :span="4">   
             <el-menu
-            default-active="2"
+            default-active="1"
             class="el-menu-vertical-demo"
             background-color="#545c64"
             text-color="#fff">
@@ -25,8 +25,8 @@
                 <span>系统设置</span>
                 </template>
                 <el-menu-item-group>
-                <el-menu-item index="1-1">权限管理</el-menu-item>
-                <el-menu-item index="1-2">角色管理</el-menu-item>
+                <el-menu-item index="2-1">权限管理</el-menu-item>
+                <el-menu-item index="2-2">角色管理</el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-submenu index="3">
@@ -35,8 +35,8 @@
                 <span>人员数据</span>
                 </template>
                 <el-menu-item-group>        
-                <el-menu-item index="1-1">人员数量</el-menu-item>
-                <el-menu-item index="1-2">人员位置</el-menu-item>
+                <el-menu-item index="3-1">人员数量</el-menu-item>
+                <el-menu-item index="3-2">人员位置</el-menu-item>
                 </el-menu-item-group>
             </el-submenu>      
             <el-submenu index="4">
@@ -45,8 +45,8 @@
                 <span>健康报警</span>
                 </template>
                 <el-menu-item-group>       
-                <el-menu-item index="1-1">心率报警</el-menu-item>
-                <el-menu-item index="1-2">血压报警</el-menu-item>
+                <el-menu-item index="4-1">心率报警</el-menu-item>
+                <el-menu-item index="4-2">血压报警</el-menu-item>
                 </el-menu-item-group>
             </el-submenu>     
             </el-menu>
@@ -77,7 +77,7 @@ export default {
 <style scoped>
 .mainContent{
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
 }
 .el-submenu .el-menu-item{
     min-width: 100%;
@@ -97,7 +97,7 @@ export default {
 }
 .mainContent .content{
   width:90%;
-  height: 600px;
+  /* height: 600px; */
   float: right;
 }
 
